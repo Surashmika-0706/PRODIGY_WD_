@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #4A148C;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffca28;
+    transform: scale(1.1);
+}
+
+/* Sections - Different Colors */
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#home {
+    background: linear-gradient(135deg, #42a5f5, #7b1fa2);
+    color: white;
+}
+
+#about {
+    background: linear-gradient(135deg, #ff9800, #f44336);
+    color: white;
+}
+
+#services {
+    background: linear-gradient(135deg, #00c853, #0091ea);
+    color: white;
+}
+
+#contact {
+    background: linear-gradient(135deg, #8e24aa, #d500f9);
+    color: white;
+}
+
+/* Section Text */
+h1, h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s ease;
+}
+
+p, ul {
+    font-size: 1.2rem;
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+}
+
+ul {
+    list-style: square;
+    text-align: left;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Scroll Animation - Active Section */
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background-color: #311B92;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
